@@ -1,0 +1,15 @@
+.navbar {
+  font-family: 'Yellowtail', cursive;
+  font-size: 1.5rem;
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  z-index: 1;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

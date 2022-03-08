@@ -1,0 +1,33 @@
+.banner {
+  position: absolute;
+  top: 75px;
+  text-align: center;
+  font-family: 'Arima Madurai', cursive;
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.85);
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 920px) {
+  .banner {
+    top: 175px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .banner {
+    top: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    top: 250px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .banner {
+    top: 300px;
+  }
+}

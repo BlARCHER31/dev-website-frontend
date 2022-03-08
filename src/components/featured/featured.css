@@ -1,0 +1,5 @@
+.featured {
+  background-color: #e2e2e0;
+  clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 75%, 0 50%);
+  min-height: 100vh;
+}
