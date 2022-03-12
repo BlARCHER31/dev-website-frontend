@@ -1,0 +1,26 @@
+.about-home-page {
+  background-image: url('../home/home-images/female-wood-worker.jpeg');
+  margin: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 65vh;
+}
+
+.about-home-page > .secondary-btn {
+  margin: auto 2rem;
+  width: 12rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .about-home-page > .secondary-btn {
+    width: 15rem;
+    font-size: 2.5rem;
+  }
+}

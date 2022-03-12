@@ -4,12 +4,14 @@
   background-color: #fff;
   overflow: hidden;
   position: fixed;
+  padding: 0.5rem 1rem;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  left: 0rem;
+  right: 0rem;
   z-index: 1;
   height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+

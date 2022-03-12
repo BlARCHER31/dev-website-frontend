@@ -1,5 +1,24 @@
 .featured {
-  background-color: #e2e2e0;
-  clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 75%, 0 50%);
-  min-height: 100vh;
+  margin-top: 4rem;
+  /* background: radial-gradient(
+    circle,
+    rgba(248, 246, 240, 1) 0%,
+    rgba(224, 224, 222, 1) 100%
+  ); */
+  /* clip-path: polygon(0 0, 100% 0%, 100% 60%, 50% 95%, 0 60%); */
+  min-height: 80vh;
+}
+
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .featured-products {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
