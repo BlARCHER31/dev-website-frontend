@@ -28,8 +28,8 @@
 
 @media screen and (min-width: 330px) and (max-width: 840px) {
   .collection-image {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
 }
 

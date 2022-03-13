@@ -3,11 +3,17 @@
   background-size: cover;
   background-position: bottom;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
 }
 
+@media screen and (min-width: 305px) {
+  .custom-banner {
+    flex-direction: row;
+  }
+}
 .custom-banner-description {
   color: #fff;
   margin: auto 2rem;

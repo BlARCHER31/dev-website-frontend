@@ -1,0 +1,32 @@
+.reviews {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 350px) {
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .reviews > .title {
+    grid-column: 1 / 3;
+  }
+}
+
+.review-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.review-comment {
+  width: 75%;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

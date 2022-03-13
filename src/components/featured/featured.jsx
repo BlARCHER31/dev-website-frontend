@@ -1,10 +1,10 @@
 import React from 'react'
-import './featured.css'
 import ProductCard from '../products/product-card'
 import img from './images/mr-mrs-wood-sign.jpg'
 import lastNameImg from './images/91xl-6xnLNL._SL1500_.jpg'
 import letsGetCozy from './images/lets-get-cozy.webp'
 import together from './images/together.jpg'
+import './featured.css'
 
 const Featured = () => {
   return (

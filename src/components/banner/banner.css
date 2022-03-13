@@ -8,13 +8,8 @@
   font-size: 1.4rem;
 }
 
-@media screen and (min-width: 330px) and (max-width: 840px) {
-  .banner {
-    top: 200px;
-  }
-}
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 330px) {
   .banner {
     top: 175px;
   }

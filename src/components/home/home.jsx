@@ -5,6 +5,8 @@ import Collections from '../collections/collections'
 import Featured from '../featured/featured'
 import AboutBanner from '../about/about-banner'
 import CustomBanner from '../custom/custom-banner'
+import Reviews from '../reviews/reviews'
+import Footer from '../footer/footer'
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <AboutBanner />
       <Featured />
       <CustomBanner />
+      <Reviews />
+      <Footer />
     </React.Fragment>
   )
 }

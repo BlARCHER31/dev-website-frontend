@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CarouselItem = ({ children, width }) => {
+const CarouselItem = ({ data, width }) => {
   return (
     <div className='carousel-item' style={{ width }}>
-      {children}
+      {data}
     </div>
   )
 }

@@ -20,10 +20,10 @@ const Carousel = ({ children }) => {
     <div className='carousel'>
       <div
         className='inner'
-        style={{ transform: `translateX(-${activeIndex * 25}%)` }}
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: '25%' })
+          return React.cloneElement(child, { width: '100%' })
         })}
       </div>
       <div className='indicators'>

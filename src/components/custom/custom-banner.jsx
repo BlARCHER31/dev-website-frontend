@@ -5,7 +5,7 @@ import './custom.css'
 const CustomBanner = () => {
   return (
     <div className='custom-banner'>
-      <p className='custom-banner-description'>Design and Customize Your Sign</p>
+      <p className='custom-banner-description'>Design a Custom Sign</p>
       <Button name={'secondary-btn'} label={'Design'} />
     </div>
   )

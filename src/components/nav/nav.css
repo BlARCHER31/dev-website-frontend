@@ -4,7 +4,7 @@
   background-color: #fff;
   overflow: hidden;
   position: fixed;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   top: 0;
   left: 0rem;
   right: 0rem;
@@ -14,4 +14,3 @@
   justify-content: space-between;
   align-items: center;
 }
-

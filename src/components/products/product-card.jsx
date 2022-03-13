@@ -1,5 +1,4 @@
 import React from 'react'
-import { MdAddShoppingCart } from 'react-icons/md'
 import './product.css'
 
 const ProductCard = ({ price, img, title }) => {
