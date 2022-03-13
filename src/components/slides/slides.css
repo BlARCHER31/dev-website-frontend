@@ -13,20 +13,62 @@
   width: 400px;
   height: 300px;
   margin: auto 10px;
+  font-size: 4rem;
+}
+.slideshow .slide .slide-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px #dbd5d5;
 }
 
 .slideshow .previous-slide,
 .slideshow .next-slide {
   width: 200px;
   height: 150px;
+  display: none;
 }
 
-.slideshow .slide {
-  width: 100%;
-  height: 100%;
-  background: #541d82;
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  box-shadow: 5px 5px 6px #551d829c;
+.previous-slide > .slide-thumbnail,
+.next-slide > .slide-thumbnail {
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 550px) {
+  .slideshow .previous-slide,
+  .slideshow .next-slide {
+    display: flex;
+  }
+}
+
+.slideshow-controller {
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slideshow .slideshow-controller span {
+  padding: 10px;
+  width: 100px;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 10px #dbd5d5;
+  user-select: none;
+}
+.slideshow .slideshow-controller span:hover {
+  color: #dbd5d5;
+  text-shadow: 3px 3px 5px #dbd5d5;
+}
+.slideshow .slideshow-controller span:active {
+  color: #999999;
+  text-shadow: 3px 3px 5px #dbd5d5;
+  background: #f8f6f0;
 }
