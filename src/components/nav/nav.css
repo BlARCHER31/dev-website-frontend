@@ -14,3 +14,43 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.sidebar {
+  height: 60vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 4rem;
+  right: 0;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.sidebar-active {
+  width: 40vw;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.burger:hover {
+  color: rgb(117, 116, 116);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  font-family: 'Arima Madurai', cursive;
+}
+
+.nav-link:hover {
+  color: rgb(151, 149, 149);
+}
