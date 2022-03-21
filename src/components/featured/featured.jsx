@@ -1,32 +1,73 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ProductCard from '../products/product-card'
-import img from './images/mr-mrs-wood-sign.jpg'
-import lastNameImg from './images/91xl-6xnLNL._SL1500_.jpg'
-import letsGetCozy from './images/lets-get-cozy.webp'
-import together from './images/together.jpg'
+import fetchProducts from '../../services/products'
 import './featured.css'
 
 const Featured = () => {
+  const [products, setFeaturedProducts] = useState()
+
+  useEffect(async () => {
+    let response = await fetchProducts.getFeaturedProducts()
+    setFeaturedProducts(response.data)
+  }, [])
+
+  // const products = [
+  //   {
+  //     title: 'Lets Get Cozy',
+  //     img: letsGetCozy,
+  //     id: 1,
+  //     price: 45,
+  //     description:
+  //       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis minima, laudantium accusantium cumque saepe asperiores.',
+  //     dimensions: `45" x 45"`,
+  //   },
+  //   {
+  //     title: `Mr and Mrs w/ Last Name`,
+  //     img: img,
+  //     id: 2,
+  //     price: 65,
+  //     description:
+  //       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis minima, laudantium accusantium cumque saepe asperiores.',
+  //     dimensions: `45" x 45"`,
+  //   },
+  //   {
+  //     title: `Custom Family Name`,
+  //     img: lastNameImg,
+  //     id: 3,
+  //     price: 50,
+  //     description:
+  //       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis minima, laudantium accusantium cumque saepe asperiores.',
+  //     dimensions: `45" x 45"`,
+  //   },
+  //   {
+  //     title: `Together`,
+  //     img: together,
+  //     id: 4,
+  //     price: 35,
+  //     description:
+  //       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis minima, laudantium accusantium cumque saepe asperiores.',
+  //     dimensions: `45" x 45"`,
+  //   },
+  // ]
+
   return (
     <div className='featured'>
       <h2 className='title'>Featured</h2>
       <div className='featured-products'>
-        <ProductCard
-          price={'$65'}
-          img={img}
-          title={`Mr and Mrs w/ Last Name`}
-        />
-        <ProductCard
-          price={'$50'}
-          img={lastNameImg}
-          title={`Custom Family Name`}
-        />
-        <ProductCard
-          price={'$85'}
-          img={letsGetCozy}
-          title={`Life is Beautiful`}
-        />
-        <ProductCard price={'$35'} img={together} title={`Together`} />
+        {products ? (
+          products.map(product => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              img={product.img_url}
+              price={product.price}
+              title={product.title}
+              product={product}
+            />
+          ))
+        ) : (
+          <h3>Getting Featured Products</h3>
+        )}
       </div>
     </div>
   )

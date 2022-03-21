@@ -1,5 +1,6 @@
 .footer {
-  min-height: 20vh;
+  min-height: 10vh;
+  margin-top: 1rem;
   color: #000;
   background: #f8f6f0;
   display: flex;
@@ -7,9 +8,6 @@
   font-size: 1rem;
   justify-items: center;
   align-items: center;
-  left: 0;
-  position: relative;
-  right: 0;
   width: 100%;
 }
 .footer-item > ul {

@@ -4,15 +4,16 @@
   background-color: #fff;
   overflow: hidden;
   position: fixed;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   top: 0;
   left: 0rem;
   right: 0rem;
   z-index: 1;
-  height: 5rem;
+  /* height: 5rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 8%);
 }
 
 .sidebar {
@@ -35,6 +36,16 @@
   width: 40vw;
 }
 
+.sidebar-toggle {
+  position: absolute;
+  right: 0;
+  width: 10%;
+}
+
+.sidebar-toggle:hover {
+  cursor: pointer;
+}
+
 .burger {
   cursor: pointer;
 }
@@ -43,14 +54,23 @@
   color: rgb(117, 116, 116);
 }
 
+.nav-btn {
+  display: flex;
+}
+
 .nav-link {
   text-decoration: none;
   color: #000;
   text-align: center;
-  width: 100%;
+  width: 25%;
   font-family: 'Arima Madurai', cursive;
 }
 
 .nav-link:hover {
   color: rgb(151, 149, 149);
+}
+
+.nav-title {
+  text-align: left;
+  width: 15%;
 }
