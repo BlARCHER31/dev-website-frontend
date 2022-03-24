@@ -17,7 +17,7 @@
 }
 
 .sidebar {
-  height: 60vh; /* 100% Full-height */
+  height: 80vh; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
@@ -29,11 +29,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 5px;
 }
 .sidebar-active {
-  width: 40vw;
+  box-shadow: -7px 0px 14px 3px rgba(135, 135, 135, 0.6);
+  width: 80vw;
 }
 
 .sidebar-toggle {
@@ -64,6 +65,13 @@
   text-align: center;
   width: 25%;
   font-family: 'Arima Madurai', cursive;
+}
+
+@media screen and (min-width: 800px) {
+ 
+  .sidebar-active {
+    width: 60vw;
+  }
 }
 
 .nav-link:hover {

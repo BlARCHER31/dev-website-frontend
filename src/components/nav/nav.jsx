@@ -6,7 +6,7 @@ import Cart from './../cart/cart'
 import NavTab from './nav-tab'
 import './nav.css'
 
-const NavBar = () => {
+const NavBar = ({ cart }) => {
   const [showNav, setShowNav] = useState(false)
   const [showCart, setShowCart] = useState(false)
 
@@ -42,6 +42,7 @@ const NavBar = () => {
         showCart={showCart}
         onClick={toggleCart}
         onClose={sideToggleClick}
+        cart={cart}
       />
       <NavTab showNav={showNav} onClick={toggleNav} onClose={sideToggleClick} />
     </div>

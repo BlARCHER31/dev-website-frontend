@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import fetchProduct from '../../services/products'
 import ProductCard from './product-card'
 
-const Products = ({ addToCart, removeFromCart, cart }) => {
+const Products = () => {
   const [products, setProducts] = useState()
 
   useEffect(async () => {
@@ -17,10 +17,7 @@ const Products = ({ addToCart, removeFromCart, cart }) => {
         {products
           ? products.map(product => (
               <ProductCard
-                cart={cart}
                 product={product}
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
                 key={product.id}
                 id={product.id}
                 price={product.price}

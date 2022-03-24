@@ -6,27 +6,11 @@ import Footer from './components/footer/footer'
 import ProductPage from './components/products/product-page'
 import Products from './components/products/product'
 import './App.css'
+import CartItem from './components/cart/cart-item'
 
 function App() {
   const [cart, setCart] = useState()
-  const addToCart = productId => {
-    let newCart
-    let newCartItem
-    if (!cart) {
-      setCart([productId])
-      console.log(cart)
-    } else {
-      newCartItem = [productId]
-      newCart = cart.concat(newCartItem)
-      setCart(newCart)
-    }
-    console.log(newCart)
-  }
-
-  const removeFromCart = (productId, cart) => {
-    let newCart = cart.filter(id => id != productId)
-    setCart(newCart)
-  }
+  const cartInfo = {id: 5, title: 'Together', price: 35, img_url: 'https://i.imgur.com/B3Fep2I.jpg'}
 
   useEffect(() => {
     let storage = JSON.parse(window.localStorage.getItem('cart'))
@@ -35,22 +19,21 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem('cart', JSON.stringify(cart))
+    console.log('updated')
   }, [cart])
 
   return (
     <div>
-      <NavBar cart={cart} addToCart={addToCart} />
+      <NavBar cart={cart} />
       <div className='container'>
         <div className='main'>
           <Routes>
+            <Route path='/cart' element={<CartItem cartInfo={cartInfo} />} />
             <Route
               path='/product/:id'
               element={<ProductPage cart={cart} setCart={setCart} />}
             />
-            <Route
-              path='/products'
-              element={<Products cart={cart} removeFromCart={removeFromCart} addToCart={addToCart} />}
-            />
+            <Route path='/products' element={<Products />} />
             <Route path='/' exact element={<Home />} />
           </Routes>
         </div>

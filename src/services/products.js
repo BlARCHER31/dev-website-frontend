@@ -30,7 +30,9 @@ async function getProduct(id) {
   let product
 
   try {
-    product = await axios.get(`http://localhost:5000/api/products/${id}`)
+    product = await axios.get(
+      `http://localhost:5000/api/products/product/${id}`
+    )
     return product
   } catch (error) {
     console.log(error.message)

@@ -7,13 +7,13 @@ import CustomBanner from '../custom/custom-banner'
 
 import Reviews from '../reviews/reviews'
 
-const Home = () => {
+const Home = ({ cart, setCart }) => {
   return (
     <React.Fragment>
       <Hero />
       <Collections />
       <AboutBanner />
-      <Featured />
+      <Featured cart={cart} setCart={setCart} />
       <CustomBanner />
       <Reviews />
     </React.Fragment>

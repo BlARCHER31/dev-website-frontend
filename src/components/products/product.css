@@ -16,6 +16,8 @@
   margin-top: 4rem;
 }
 
+/* Individual Product Page Styling */
+
 .product-page-img {
   justify-self: center;
   height: 15rem;
@@ -45,7 +47,15 @@
     width: 20rem;
   }
 }
+
+.cart-icon:hover {
+  cursor: pointer;
+  color: #e2e2e2;
+}
+
+/* Styles for individual product cards*/
 .product-card {
+  text-decoration: none;
   color: #000;
   font-family: 'Arima Madurai', cursive;
   display: flex;
@@ -56,6 +66,7 @@
   font-weight: lighter;
   width: 10rem;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .product-card:hover {
