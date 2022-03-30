@@ -5,12 +5,17 @@ import NavBar from './components/nav/nav'
 import Footer from './components/footer/footer'
 import ProductPage from './components/products/product-page'
 import Products from './components/products/product'
+import Cart from './components/cart/cart/cart'
 import './App.css'
-import CartItem from './components/cart/cart-item'
 
 function App() {
   const [cart, setCart] = useState()
-  const cartInfo = {id: 5, title: 'Together', price: 35, img_url: 'https://i.imgur.com/B3Fep2I.jpg'}
+  const cartInfo = {
+    id: 5,
+    title: 'Together',
+    price: 35,
+    img_url: 'https://i.imgur.com/B3Fep2I.jpg',
+  }
 
   useEffect(() => {
     let storage = JSON.parse(window.localStorage.getItem('cart'))
@@ -19,16 +24,24 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem('cart', JSON.stringify(cart))
-    console.log('updated')
   }, [cart])
 
   return (
     <div>
-      <NavBar cart={cart} />
+      <NavBar setCart={setCart} cart={cart} />
       <div className='container'>
         <div className='main'>
           <Routes>
-            <Route path='/cart' element={<CartItem cartInfo={cartInfo} />} />
+            <Route
+              path='products/collections/:collectionName/:collectionID'
+              element={<Products />}
+            />
+            <Route
+              path='/cart'
+              element={
+                <Cart setCart={setCart} cart={cart} classPrefix={'cart'} />
+              }
+            />
             <Route
               path='/product/:id'
               element={<ProductPage cart={cart} setCart={setCart} />}

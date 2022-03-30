@@ -23,7 +23,7 @@ const NavTab = ({ showNav, onClose }) => {
       <Link className='nav-link' to=''>
         About
       </Link>
-      <Link className='nav-link' to=''>
+      <Link className='nav-link' to='/cart'>
         Cart
       </Link>
       <Link className='nav-link' to=''>

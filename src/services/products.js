@@ -12,6 +12,20 @@ async function getAllProducts() {
   }
 }
 
+/* This will fetch all products in a specific category */
+async function getProductsInGenre(genreID) {
+  let products
+
+  try {
+    products = await axios.get(
+      `http://localhost:5000/api/products/categories/${genreID}`
+    )
+    return products
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 /* This will fetch any product with the featured BOOLEAN set to true */
 async function getFeaturedProducts() {
   let featuredProducts
@@ -39,8 +53,23 @@ async function getProduct(id) {
   }
 }
 
+/*This Function Will GET ALL categories. It returns the Category Name and IMG URL. */
+async function getCollections() {
+  try {
+    let response = await axios.get(
+      `http://localhost:5000/api/products/categories/`
+    )
+
+    return response.data
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
 export default {
   getFeaturedProducts,
   getProduct,
   getAllProducts,
+  getProductsInGenre,
+  getCollections,
 }

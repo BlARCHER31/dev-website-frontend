@@ -11,8 +11,6 @@ const ProductPage = ({ cart, setCart }) => {
 
   useEffect(async () => {
     let response = await fetchProduct.getProduct(id)
-
-    console.log(response.data[0])
     setProduct(response.data[0])
   }, [])
   // const product = {
@@ -43,7 +41,7 @@ const ProductPage = ({ cart, setCart }) => {
               ${product.price}{' '}
               <FiShoppingCart
                 className='cart-icon'
-                onClick={() => cartHandler.addToCart(product.id, cart, setCart)}
+                onClick={() => cartHandler.addToCart(product, cart, setCart)}
                 size={28}
               />
             </p>

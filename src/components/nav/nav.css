@@ -68,7 +68,6 @@
 }
 
 @media screen and (min-width: 800px) {
- 
   .sidebar-active {
     width: 60vw;
   }
@@ -76,9 +75,34 @@
 
 .nav-link:hover {
   color: rgb(151, 149, 149);
+  cursor: pointer;
 }
 
 .nav-title {
   text-align: left;
   width: 15%;
+}
+
+.cart-and-count {
+  display: flex;
+  padding-right: 2rem;
+}
+
+.cart-count {
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .cart-count {
+    display: block;
+  }
+}
+
+.cart-count-active {
+  background-color: #f8f6f0;
+  font-family: 'Arima Madurai', cursive;
+  width: 50%;
+  border-radius: 40%;
+  text-align: center;
+  color: #7c7b79;
 }
