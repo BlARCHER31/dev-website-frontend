@@ -14,19 +14,19 @@ const NavTab = ({ showNav, onClose }) => {
         />
       }
 
-      <Link className='nav-link' to='/'>
+      <Link className='nav-link' to='/' onClick={onClose}>
         Home
       </Link>
-      <Link className='nav-link' to='/products'>
+      <Link className='nav-link' to='/products' onClick={onClose}>
         Products
       </Link>
-      <Link className='nav-link' to=''>
+      <Link className='nav-link' to='' onClick={onClose}>
         About
       </Link>
-      <Link className='nav-link' to='/cart'>
+      <Link className='nav-link' to='/cart' onClick={onClose}>
         Cart
       </Link>
-      <Link className='nav-link' to=''>
+      <Link className='nav-link' to='' onClick={onClose}>
         Contact
       </Link>
     </div>
