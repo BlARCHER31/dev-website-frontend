@@ -1,0 +1,28 @@
+.custom-banner {
+    background-image: url('../../home/home-images/wood-worker.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  @media screen and (min-width: 305px) {
+    .custom-banner {
+      flex-direction: row;
+    }
+  }
+  .custom-banner-description {
+    color: #fff;
+    margin: auto 2rem;
+    font-size: 2rem;
+    font-family: 'Arima Madurai', cursive;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .custom-banner-description {
+      font-size: 3rem;
+    }
+  }

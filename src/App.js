@@ -7,6 +7,7 @@ import ProductPage from './components/products/product-page'
 import Products from './components/products/product'
 import Cart from './components/cart/cart/cart'
 import './App.css'
+import CustomPage from './components/custom/custom-page/custom-page';
 
 function App() {
   const [cart, setCart] = useState()
@@ -32,6 +33,10 @@ function App() {
       <div className='container'>
         <div className='main'>
           <Routes>
+            <Route 
+              path='products/custom'
+              element={<CustomPage />}
+              />
             <Route
               path='products/collections/:collectionName/:collectionID'
               element={<Products />}

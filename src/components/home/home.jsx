@@ -3,7 +3,7 @@ import Hero from '../hero/hero'
 import Collections from '../collections/collections'
 import Featured from '../featured/featured'
 import AboutBanner from '../about/about-banner'
-import CustomBanner from '../custom/custom-banner'
+import CustomBanner from '../custom/custom-banner/custom-banner'
 
 import Reviews from '../reviews/reviews'
 

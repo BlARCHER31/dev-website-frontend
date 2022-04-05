@@ -1,0 +1,30 @@
+.custom-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  width: 20rem;
+  gap: 2rem;
+}
+
+.custom-product-img {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.custom-product-img:hover {
+  cursor: pointer;
+}
+
+.custom-product-img-active {
+  width: 100%;
+  height: 10rem;
+  grid-row: 1;
+  grid-column: 1 / 4;
+}
+
+.custom-text {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  align-self: center;
+  margin: 0;
+}
