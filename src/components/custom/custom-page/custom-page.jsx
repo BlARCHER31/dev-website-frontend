@@ -5,25 +5,21 @@ import CustomImageGrid from '../custom-img-grid/custom-img-grid'
 
 const CustomPage = () => {
   const [customProduct, setCustomProduct] = useState()
-  const [activeProduct, setActiveProduct] = useState()
+
   const [boardPhrase, setBoardPhrase] = useState('Your text here.')
   const [fontColor, setFontColor] = useState('rgb(255,255,255)')
   const [fontSize, setFontSize] = useState('2rem')
   const [fontFamily, setTextFontFamily] = useState(
     'Brush Script MT, Brush Script Std, cursive'
   )
-
+css 
   useEffect(async () => {
     const result = await customProductHandler.getCustomBoardProduct()
     setCustomProduct(result.data)
-    setActiveProduct(result.data[0])
   }, [])
 
   const handleChange = (setState, event) => {
     setState(event.target.value)
-  }
-  const handleActive = product => {
-    setActiveProduct(product)
   }
 
   return (
@@ -33,8 +29,6 @@ const CustomPage = () => {
         {customProduct ? (
           <CustomImageGrid
             customProduct={customProduct}
-            activeProduct={activeProduct}
-            handleActive={handleActive}
             boardPhrase={boardPhrase}
             style={{
               color: fontColor,

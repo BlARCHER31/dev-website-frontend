@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './custom-img-grid.css'
 
-const CustomImageGrid = ({
-  customProduct,
-  activeProduct,
-  handleActive,
-  boardPhrase,
-  style,
-}) => {
+const CustomImageGrid = ({ customProduct, boardPhrase, style }) => {
+  const [activeProduct, setActiveProduct] = useState()
+
+  const handleActive = product => {
+    setActiveProduct(product)
+  }
+  useEffect(() => {
+    setActiveProduct(customProduct[0])
+  }, [])
+
   return (
     <div className='custom-img-grid'>
       {customProduct.map(productDetail => (
