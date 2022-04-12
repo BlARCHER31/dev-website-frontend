@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 /* This function will add items to local storage that will act as the cart.
     It stores the Product Information and the count the customer wants.
     The Product information will have to be retrieved for Checkout */

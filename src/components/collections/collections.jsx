@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import CollectionCard from './collection-card'
-import scriptureImage from './images/scripture-sign.jpeg'
-import furnitureImage from './images/painted-table.jpg'
-import homeImage from './images/home-decor-sign.jpg'
 import productHandler from '../../services/products'
 import './collections.css'
 
 const Collections = () => {
   const [collections, setCollections] = useState()
 
-  useEffect(async () => {
-    let response = await productHandler.getCollections()
-    setCollections(response)
+  useEffect(() => {
+    async function fetchCategories() {
+      let response = await productHandler.getCollections()
+      setCollections(response)
+    }
+    fetchCategories()
   }, [])
 
   return (
@@ -21,7 +21,9 @@ const Collections = () => {
       <div className='collection-card-group'>
         {collections
           ? collections.map(collection => (
-              <Link to={`/products/collections/${collection.name}/${collection.id}`}>
+              <Link
+                to={`/products/collections/${collection.name}/${collection.id}`}
+              >
                 <CollectionCard
                   key={collection.name}
                   image={collection.img_url}

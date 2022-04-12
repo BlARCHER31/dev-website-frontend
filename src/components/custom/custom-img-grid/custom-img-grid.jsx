@@ -29,13 +29,13 @@ const CustomImageGrid = ({
             onClick={() => handleActive(productDetail)}
             className={
               'custom-product-img' +
-              (activeProduct == productDetail ? '-active' : '')
+              (activeProduct === productDetail ? '-active' : '')
             }
             src={productDetail.img_url}
             alt=''
           />
 
-          {activeProduct == productDetail ? (
+          {activeProduct === productDetail ? (
             <p className='custom-text' style={style}>
               {boardPhrase}
             </p>
