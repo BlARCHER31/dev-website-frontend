@@ -1,25 +1,21 @@
 import React from 'react'
 import Hero from '../hero/hero'
-import NavBar from './../nav/nav'
 import Collections from '../collections/collections'
 import Featured from '../featured/featured'
 import AboutBanner from '../about/about-banner'
-import CustomBanner from '../custom/custom-banner'
-import Footer from '../footer/footer'
+import CustomBanner from '../custom/custom-banner/custom-banner'
 
 import Reviews from '../reviews/reviews'
 
-const Home = () => {
+const Home = ({ cart, setCart }) => {
   return (
     <React.Fragment>
-      <NavBar />
       <Hero />
       <Collections />
       <AboutBanner />
-      <Featured />
+      <Featured cart={cart} setCart={setCart} />
       <CustomBanner />
       <Reviews />
-      <Footer />
     </React.Fragment>
   )
 }

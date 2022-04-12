@@ -48,7 +48,6 @@ const SlideShow = ({ data, interval = 3000 }) => {
     } else {
       setCurrentSlide(currentSlide + 1)
     }
-    console.log(currentSlideData, nextSlideData, previousSlideData)
   }
 
   return (

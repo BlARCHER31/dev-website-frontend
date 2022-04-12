@@ -1,0 +1,55 @@
+.cart-tab {
+  height: 80vh; /* 80% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  top: 4rem;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.6s; /* 0.5 second transition effect to slide in the sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  font-family: 'Arima Madurai', cursive;
+}
+
+.cart-tab-active {
+  box-shadow: -7px 0px 14px 3px rgba(135, 135, 135, 0.6);
+  width: 80vw;
+}
+
+@media screen and (min-width: 550px) {
+  .cart-tab-title {
+  }
+}
+
+.cart-tab-img {
+  width: 80px;
+  height: 80px;
+}
+
+.cart-tab-table {
+  font-size: 1rem;
+  width: 75%;
+}
+
+@media screen and (min-width: 500px) {
+  .cart-tab {
+    font-size: 1.2rem;
+  }
+  .cart-tab-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cart-tab {
+    font-size: 1.4rem;
+  }
+  .cart-tab-img {
+    width: 150px;
+    height: 150px;
+  }
+}

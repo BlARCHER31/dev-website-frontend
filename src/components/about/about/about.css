@@ -1,0 +1,23 @@
+.about {
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-heading {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about-list {
+  list-style: none;
+  align-self: center;
+}
+
+.about-tech-stack {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

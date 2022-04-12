@@ -4,19 +4,20 @@
   background-color: #fff;
   overflow: hidden;
   position: fixed;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   top: 0;
   left: 0rem;
   right: 0rem;
   z-index: 1;
-  height: 5rem;
+  /* height: 5rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 8%);
 }
 
 .sidebar {
-  height: 60vh; /* 100% Full-height */
+  height: 80vh; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
@@ -28,11 +29,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 5px;
 }
 .sidebar-active {
-  width: 40vw;
+  box-shadow: -7px 0px 14px 3px rgba(135, 135, 135, 0.6);
+  width: 80vw;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  right: 0;
+  width: 10%;
+}
+
+.sidebar-toggle:hover {
+  cursor: pointer;
 }
 
 .burger {
@@ -43,14 +55,54 @@
   color: rgb(117, 116, 116);
 }
 
+.nav-btn {
+  display: flex;
+}
+
 .nav-link {
   text-decoration: none;
   color: #000;
   text-align: center;
-  width: 100%;
+  width: 25%;
   font-family: 'Arima Madurai', cursive;
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar-active {
+    width: 60vw;
+  }
 }
 
 .nav-link:hover {
   color: rgb(151, 149, 149);
+  cursor: pointer;
+}
+
+.nav-title {
+  text-align: left;
+  width: 15%;
+}
+
+.cart-and-count {
+  display: flex;
+  padding-right: 2rem;
+}
+
+.cart-count {
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .cart-count {
+    display: block;
+  }
+}
+
+.cart-count-active {
+  background-color: #f8f6f0;
+  font-family: 'Arima Madurai', cursive;
+  width: 50%;
+  border-radius: 40%;
+  text-align: center;
+  color: #7c7b79;
 }
