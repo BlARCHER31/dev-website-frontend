@@ -20,6 +20,7 @@
   height: 10rem;
   grid-row: 1;
   grid-column: 1 / 4;
+  align-self: center;
 }
 
 .custom-text {

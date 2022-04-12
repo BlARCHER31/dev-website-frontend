@@ -50,7 +50,7 @@ const Cart = ({ cart, setCart, classPrefix }) => {
                       className='quantity-indicator'
                       onClick={() =>
                         cartHandler.increaseProductCountByOne(
-                          cartItem.product.id,
+                          cartItem.product,
                           cart,
                           setCart
                         )
@@ -61,7 +61,7 @@ const Cart = ({ cart, setCart, classPrefix }) => {
                       className='quantity-indicator'
                       onClick={() =>
                         cartHandler.removeFromCart(
-                          cartItem.product.id,
+                          cartItem.product,
                           cart,
                           setCart
                         )

@@ -1,11 +1,13 @@
 const axios = require('axios')
 
+const baseURL = 'https://dev-ecommerce.glitch.me/'
+
 /* This will fetch all products */
 async function getAllProducts() {
   let products
 
   try {
-    products = await axios.get(`http://localhost:5000/api/products`)
+    products = await axios.get(`${baseURL}api/products`)
     return products
   } catch (error) {
     console.log(error)
@@ -17,9 +19,7 @@ async function getProductsInGenre(genreID) {
   let products
 
   try {
-    products = await axios.get(
-      `http://localhost:5000/api/products/categories/${genreID}`
-    )
+    products = await axios.get(`${baseURL}api/products/categories/${genreID}`)
     return products
   } catch (error) {
     console.log(error)
@@ -31,9 +31,7 @@ async function getFeaturedProducts() {
   let featuredProducts
 
   try {
-    featuredProducts = await axios.get(
-      'http://localhost:5000/api/products/featured'
-    )
+    featuredProducts = await axios.get(`${baseURL}api/products/featured`)
     return featuredProducts
   } catch (error) {
     console.log(error.message)
@@ -44,9 +42,7 @@ async function getProduct(id) {
   let product
 
   try {
-    product = await axios.get(
-      `http://localhost:5000/api/products/product/${id}`
-    )
+    product = await axios.get(`${baseURL}api/products/product/${id}`)
     return product
   } catch (error) {
     console.log(error.message)
@@ -56,9 +52,7 @@ async function getProduct(id) {
 /*This Function Will GET ALL categories. It returns the Category Name and IMG URL. */
 async function getCollections() {
   try {
-    let response = await axios.get(
-      `http://localhost:5000/api/products/categories/`
-    )
+    let response = await axios.get(`${baseURL}api/products/categories/`)
 
     return response.data
   } catch (error) {

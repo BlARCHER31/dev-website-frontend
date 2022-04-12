@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './custom-img-grid.css'
 
-const CustomImageGrid = ({ customProduct, boardPhrase, style }) => {
+const CustomImageGrid = ({
+  customProduct,
+  boardPhrase,
+  style,
+  setBoardStain,
+}) => {
   const [activeProduct, setActiveProduct] = useState()
 
   const handleActive = product => {
@@ -10,6 +15,10 @@ const CustomImageGrid = ({ customProduct, boardPhrase, style }) => {
   useEffect(() => {
     setActiveProduct(customProduct[0])
   }, [])
+
+  useEffect(() => {
+    return activeProduct ? setBoardStain(activeProduct.img_url) : null
+  }, [activeProduct])
 
   return (
     <div className='custom-img-grid'>

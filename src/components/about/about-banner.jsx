@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './about.css'
-import Button from './../button/button'
 
 const AboutBanner = () => {
   return (
     <div className='about-home-page'>
-      <Button name={'secondary-btn'} label={'My Story'} />
+      <Link to='/about' className={'secondary-btn'}>
+        MyStory
+      </Link>
     </div>
   )
 }

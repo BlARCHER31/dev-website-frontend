@@ -15,8 +15,8 @@ function addToCart(product, cart, setCart) {
     /* If the cart exists, it checks to see if the 
         product is already in the cart, and then will
         increment the count of the product by 1 if it does.*/
-  } else if (cart && cart.some(obj => obj.product.id === product.id)) {
-    let itemIndex = cart.findIndex(x => x.product.id === product.id)
+  } else if (cart && cart.some(obj => obj.product === product)) {
+    let itemIndex = cart.findIndex(x => x.product === product)
     cart[itemIndex].count += 1
     setCart(cart.slice())
   } else {
@@ -32,23 +32,23 @@ function addToCart(product, cart, setCart) {
     If it is, it then subtracts from the count.
     If the count is 1 or less it removes the Item completely. */
 
-function removeFromCart(productId, cart, setCart) {
+function removeFromCart(product, cart, setCart) {
   let newCart
-  let itemIndex = cart.findIndex(x => x.product.id === productId)
+  let itemIndex = cart.findIndex(x => x.product === product)
 
   if (cart[itemIndex].count > 1) {
     cart[itemIndex].count -= 1
     setCart(cart.slice())
   } else {
-    newCart = cart.filter(obj => obj.product.id !== productId)
+    newCart = cart.filter(obj => obj.product !== product)
     setCart(newCart)
   }
 }
 
 /* This function will increase the quantity of a cart Item by one. */
 
-function increaseProductCountByOne(id, cart, setCart) {
-  let itemIndex = cart.findIndex(x => x.product.id === id)
+function increaseProductCountByOne(product, cart, setCart) {
+  let itemIndex = cart.findIndex(x => x.product === product)
   cart[itemIndex].count += 1
   setCart(cart.slice())
 }

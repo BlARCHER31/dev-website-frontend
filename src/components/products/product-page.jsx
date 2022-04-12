@@ -13,14 +13,7 @@ const ProductPage = ({ cart, setCart }) => {
     let response = await fetchProduct.getProduct(id)
     setProduct(response.data[0])
   }, [])
-  // const product = {
-  //   title: 'Lets Get Cozy',
-  //   img: img,
-  //   price: 45,
-  //   description:
-  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis minima, laudantium accusantium cumque saepe asperiores.',
-  //   dimensions: `45" x 45"`,
-  // }
+  
   return (
     <div className='product'>
       {product ? (

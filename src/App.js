@@ -7,20 +7,18 @@ import ProductPage from './components/products/product-page'
 import Products from './components/products/product'
 import Cart from './components/cart/cart/cart'
 import './App.css'
-import CustomPage from './components/custom/custom-page/custom-page';
+import CustomPage from './components/custom/custom-page/custom-page'
+import About from './components/about/about/about'
 
 function App() {
   const [cart, setCart] = useState()
-  const cartInfo = {
-    id: 5,
-    title: 'Together',
-    price: 35,
-    img_url: 'https://i.imgur.com/B3Fep2I.jpg',
-  }
 
   useEffect(() => {
     let storage = JSON.parse(window.localStorage.getItem('cart'))
     !storage ? setCart(null) : setCart(storage)
+    alert(
+      'This is currently a demo Ecommerce site. At the moment none of these products are real or purchaseable.'
+    )
   }, [])
 
   useEffect(() => {
@@ -33,10 +31,14 @@ function App() {
       <div className='container'>
         <div className='main'>
           <Routes>
-            <Route 
+            <Route
+            path='/about'
+            element={<About />}
+            />
+            <Route
               path='products/custom'
-              element={<CustomPage />}
-              />
+              element={<CustomPage setCart={setCart} cart={cart} />}
+            />
             <Route
               path='products/collections/:collectionName/:collectionID'
               element={<Products />}
