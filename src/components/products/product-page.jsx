@@ -4,6 +4,7 @@ import fetchProduct from '../../services/products'
 import { FiShoppingCart } from 'react-icons/fi'
 import cartHandler from '../../services/cart'
 import './product.css'
+import Spinner from '../spinner/spinner'
 
 const ProductPage = ({ cart, setCart }) => {
   const [product, setProduct] = useState()
@@ -13,7 +14,7 @@ const ProductPage = ({ cart, setCart }) => {
     let response = await fetchProduct.getProduct(id)
     setProduct(response.data[0])
   }, [])
-  
+
   return (
     <div className='product'>
       {product ? (
@@ -41,7 +42,7 @@ const ProductPage = ({ cart, setCart }) => {
           </span>
         </React.Fragment>
       ) : (
-        <h3></h3>
+        <Spinner title={'Getting Products'} />
       )}
     </div>
   )

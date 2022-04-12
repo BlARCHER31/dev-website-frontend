@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ProductCard from '../products/product-card'
 import fetchProducts from '../../services/products'
 import './featured.css'
+import Spinner from '../spinner/spinner'
 
 const Featured = () => {
   const [products, setFeaturedProducts] = useState()
@@ -66,7 +67,7 @@ const Featured = () => {
             />
           ))
         ) : (
-          <h3>Getting Featured Products</h3>
+          <Spinner />
         )}
       </div>
     </div>

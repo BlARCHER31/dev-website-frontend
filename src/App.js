@@ -31,10 +31,7 @@ function App() {
       <div className='container'>
         <div className='main'>
           <Routes>
-            <Route
-            path='/about'
-            element={<About />}
-            />
+            <Route path='/about' element={<About />} />
             <Route
               path='products/custom'
               element={<CustomPage setCart={setCart} cart={cart} />}

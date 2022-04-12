@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import fetchProduct from '../../services/products'
 import ProductCard from './product-card'
+import Spinner from '../spinner/spinner'
 
 const Products = () => {
   const [products, setProducts] = useState()
@@ -32,7 +33,7 @@ const Products = () => {
                 title={product.title}
               />
             ))
-          : null}
+          : <Spinner />}
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import customProductHandler from './services/custom'
 import CustomImageGrid from '../custom-img-grid/custom-img-grid'
 import { FiShoppingCart } from 'react-icons/fi'
 import cartHandler from '../../../services/cart'
+import Spinner from '../../spinner/spinner'
 import './custom-page.css'
 
 const CustomPage = ({ cart, setCart }) => {
@@ -16,10 +17,13 @@ const CustomPage = ({ cart, setCart }) => {
     'Brush Script MT, Brush Script Std, cursive'
   )
   const [product, setProduct] = useState()
-  useEffect(async () => {
-    const result = await customProductHandler.getCustomBoardProduct()
-    setCustomProduct(result.data)
-    setPrice(result.data[0].price)
+  useEffect(() => {
+    async function fetchCustomProduct() {
+      const result = await customProductHandler.getCustomBoardProduct()
+      setCustomProduct(result.data)
+      setPrice(result.data[0].price)
+    }
+    fetchCustomProduct()
   }, [])
 
   useEffect(() => {
@@ -55,16 +59,7 @@ const CustomPage = ({ cart, setCart }) => {
           />
         ) : null}
         {customProduct ? (
-          <div className='custom-details'>
-            <span>
-              <h3>{customProduct[0].title}</h3>
-              <p className='price'>Price : ${customProduct[0].price}</p>
-              <FiShoppingCart
-                className='cart-icon'
-                onClick={() => cartHandler.addToCart(product, cart, setCart)}
-                size={28}
-              />
-            </span>
+          <React.Fragment>
             <form action='submit' className='custom-board-form'>
               <label htmlFor='wording'>Text</label>
               <input
@@ -114,8 +109,21 @@ const CustomPage = ({ cart, setCart }) => {
                 <option value='4rem'>Large</option>
               </select>
             </form>
-          </div>
-        ) : null}
+            <div className='custom-details'>
+              <span>
+                <h3>{customProduct[0].title}</h3>
+                <p className='price'>Price : ${customProduct[0].price}</p>
+                <FiShoppingCart
+                  className='cart-icon'
+                  onClick={() => cartHandler.addToCart(product, cart, setCart)}
+                  size={28}
+                />
+              </span>
+            </div>
+          </React.Fragment>
+        ) : (
+          <Spinner />
+        )}
       </div>
     </div>
   )

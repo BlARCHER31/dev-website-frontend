@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import CollectionCard from './collection-card'
 import productHandler from '../../services/products'
 import './collections.css'
+import Spinner from '../spinner/spinner'
 
 const Collections = () => {
   const [collections, setCollections] = useState()
@@ -31,7 +32,7 @@ const Collections = () => {
                 />
               </Link>
             ))
-          : null}
+          : <Spinner />}
       </div>
     </div>
   )
