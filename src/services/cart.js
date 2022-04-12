@@ -92,7 +92,7 @@ function calculateCartTotal(cart) {
 	return cartTotal
 }
 
-export default {
+ {
 	addToCart,
 	removeFromCart,
 	getCartItems,
