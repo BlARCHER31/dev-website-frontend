@@ -32,14 +32,22 @@ const About = () => {
       </li>
       <p className='about-heading'>The Purpose</p>
       <p className='about-description'>
-        There were actually two purposes for this project. One of them being to
-        demonstrate the level of frontend and backend skill I have acquired, but
-        to also build a real world website for my wife. My wife and her family
-        have made custom designed repurposed boards for quite some time now. All
-        by word of mouth and some Facebook things. She has decided to venture
-        farther into that area by starting her own custom sign business.
-        Currently all the products on this website and the DB are all test
-        products.
+        The purpose of this project was to demonstrate my current Full Stack
+        Capabilities and also continue to grow as a developer. I implemented
+        some new features into this project that I had not yet used or tried.
+        Other than simply showcasing my current knowledge and understanding I
+        was able to learn at the same time.
+      </p>
+      <p className='about-heading'>The Inspiration</p>
+      <p className='about-description'>
+        My wife and her family have always created these custom boards from old
+        and used wood. They would sand, stain and paint them to give new life
+        and reclaim the wood. The money that they would get from the sales would
+        then be used toward mission trips to places like Honduras and Uganda.
+        <br />
+        My wife has contemplated restarting this and growing it into a larger
+        business. So I decided to use it as a project idea and the basis for a
+        future Ecommerce Website for her.
       </p>
       <p className='about-heading'>Goals</p>
       <li className='about-list'>
