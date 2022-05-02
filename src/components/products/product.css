@@ -1,6 +1,7 @@
 /* Styles for the full product page */
 .products-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
